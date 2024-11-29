@@ -1,0 +1,276 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: url('/andre-taissin-5OUMf1Mr5pU-unsplash.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Header */
+header {
+  background: rgba(255, 255, 255, 0.8); /* Transparent white background */
+  color: #333;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.search-bar {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-bar input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.search-bar button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #4caf50;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background: #45a049;
+}
+
+/* Navigation */
+nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: end;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.8); /* Transparent background for links */
+  border-radius: 4px;
+}
+
+.nav-links li a:hover {
+  background: rgba(255, 255, 255, 1); /* Fully white on hover */
+}
+
+#hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Hidden sections */
+.hidden {
+  display: none;
+}
+
+/* Main content */
+main {
+  /* padding: 2rem; */
+  background: rgba(255, 255, 255, 0.8); /* Transparent main content background */
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 600px;
+  margin: 20px;
+
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 300px;
+}
+
+form textarea {
+  resize: none;
+}
+
+form button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #4caf50;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #45a049;
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;
+  margin-top: 1rem;
+  min-width: 1000px;
+
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+  text-overflow: ellipsis;
+}
+
+table th {
+  background: #f4f4f4;
+}
+
+table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+table tr:hover {
+  background: #f1f1f1;
+}
+
+button.delete-btn {
+  padding: 0.5rem;
+  border: none;
+  background: #ff4d4d;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.delete-btn:hover {
+  background: #ff1a1a;
+}
+
+/* Footer */
+footer {
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+
+@media (max-width: 1025px) {
+  table {
+
+    min-width: 800px;
+  }
+}
+@media (max-width: 820px) {
+  table {
+
+    min-width: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+  }
+  
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  form {
+    min-width: 80vw;
+  
+  }
+  table{
+    min-width: 100px;
+    
+  }
+  main{
+    transform: scale(0.7); /* Scale to 70% on smaller screens */
+    transform-origin: center;
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent */
+    padding: 1rem;
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+

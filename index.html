@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">Shank'sDigiBank</div>
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="Search employee...">
+        <button id="search-btn">Search</button>
+      </div>
+    </div>
+    <nav>
+      <button id="hamburger">☰</button>
+      <ul class="nav-links">
+        <li><a href="#" id="register-link">Employee Registration</a></li>
+        <li><a href="#" id="list-link">Employee Listing</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Employee Registration -->
+    <section id="register" class="hidden">
+      <h2>Register Employee</h2>
+      <form id="employee-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="position">Position:</label>
+        <input type="text" id="position" required>
+        <label for="about">About Me:</label>
+        <textarea id="about" required></textarea>
+        <label for="joining_date">Joining Date:</label>
+        <input type="date" id="joining_date" required>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Employee Listing -->
+    <section id="list" class="hidden">
+      <h2>Employee Listing</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>About</th>
+            <th>Joining Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="employee-list"></tbody>
+      </table>
+    </section>
+
+    <!-- Search Results -->
+    <section id="search-results" class="hidden">
+      <h2>Search Results</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>About</th>
+            <th>Joining Date</th>
+          </tr>
+        </thead>
+        <tbody id="search-list"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Shashank Gupta</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
